@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}",
+        },
+        {
+            "name": "Train Model",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",  // Le chemin vers ton script main.py
+            "args": [
+                "-c", "config.json",  // Le chemin vers ton fichier de configuration
+                "-t", "train"       // L'argument pour spécifier la tâche 'train'
+            ],
+            "console": "integratedTerminal",  // Utilisation du terminal intégré de VS Code
+        },
+        {
+            "name": "Generate Samples",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "main.py",  // Le chemin vers ton script main.py
+            "args": [
+                "-c", "config.json",  // Le chemin vers ton fichier de configuration
+                "-t", "generate"       // L'argument pour spécifier la tâche 'train'
+            ],
+            "console": "integratedTerminal",  // Utilisation du terminal intégré de VS Code
+        },
+    ]
+}

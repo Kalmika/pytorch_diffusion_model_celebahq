@@ -3,19 +3,19 @@
         "t_emb_dim": 128
     },
     "diffusion_config":{
-        "T": 1000,
+        "T": 200,
         "beta_0": 0.0001,
         "beta_T": 0.02
     },
     "train_config": {
         "output_directory": "model/celebahq",
         "ckpt_epoch": "max",
-        "n_epochs": 1000,
+        "n_epochs": 100,
         "learning_rate": 1e-4,
         "batch_size": 2
     },
     "gen_config":{
-        "output_directory": "plots/celebahq",
+        "output_directory": "plots/celebahq_ddim200_eta0.3",
         "ckpt_path": "model/celebahq",
         "ckpt_epoch": "max",
         "n": 4
